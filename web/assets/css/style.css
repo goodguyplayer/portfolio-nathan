@@ -130,7 +130,30 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background-image: url(../images/Céu-\ preto.png); background-size: cover; background-repeat: no-repeat; }
+body { 
+    background-color: black; 
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.75), black 120%
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
 
 
 /* REUSED STYLE*/
